@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import "./Feed.css"
 import TweetBox from './TweetBox'
+import FlipMove from 'react-flip-move'
 import Post from './Post'
 import db from './firebase'
 import { collection, getDocs } from 'firebase/firestore'
@@ -8,7 +9,11 @@ import { collection, getDocs } from 'firebase/firestore'
 
 function Feed() {
   const [posts,setPosts] = useState([]);
-  const postData = async()=>{
+  const [tweetMessage,setTweetMessage] = useState("");
+  console.log("feed tweet",tweetMessage)
+  console.log("feed set",setTweetMessage)
+
+  const getData = async()=>{
     const temp=[]
     const querySnapshot = await getDocs(collection(db, "post"))
 
@@ -19,16 +24,24 @@ function Feed() {
   }
 
   useEffect(() => {
-    postData()
+    getData()
   },[])
+
+  useEffect(()=>{
+    if(tweetMessage=== "")
+    {
+      getData()
+    }
+
+  },[tweetMessage])
 
   return (
     <div className='feed'>
       <div className="feed_header">
       <h2>Home</h2>
       </div>
-      <TweetBox/>
-
+      <TweetBox tweetMessage={tweetMessage} setTweetMessage={setTweetMessage}/>
+    <FlipMove>
       {posts.map(post => (
         <Post
         displayName= {post.displayName}
@@ -39,6 +52,7 @@ function Feed() {
         image={post.image}
       />
       ))}
+      </FlipMove>
     
     </div>
   )
