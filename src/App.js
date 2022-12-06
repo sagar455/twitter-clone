@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from './components/Sidebar'
-import Feed from './components/Feed'
-import Widgets from './components/Widgets';
+import Sidebar from './components/Sidebar/Sidebar'
+import Feed from './components/Feeds/Feed'
+import Widgets from './components/Widgets/Widgets';
 import './App.css';
 
 function App() {
