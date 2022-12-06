@@ -13,6 +13,9 @@
     display: flex;
     padding: 20px;
 }
+.tweetBox_input input:focus{
+    border: none;
+}
 
 .tweetBox_input input{
     flex:1;
