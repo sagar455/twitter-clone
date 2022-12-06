@@ -3,6 +3,11 @@
     align-items: flex-start;
     border-bottom: 1px solid var(--twitter-background);
     padding-bottom: 10px;
+    cursor:pointer;
+}
+
+.post:hover{
+    background-color: var(--twitter-background);
 }
 
 .post_badge{
@@ -38,4 +43,9 @@
 
 .post_avatar{
     padding:20px;
+}
+
+.post_image{
+    width:90%;
+   
 }
