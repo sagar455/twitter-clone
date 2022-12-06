@@ -10,8 +10,6 @@ import { collection, getDocs } from 'firebase/firestore'
 function Feed() {
   const [posts,setPosts] = useState([]);
   const [tweetMessage,setTweetMessage] = useState("");
-  console.log("feed tweet",tweetMessage)
-  console.log("feed set",setTweetMessage)
 
   const getData = async()=>{
     const temp=[]
@@ -44,6 +42,7 @@ function Feed() {
     <FlipMove>
       {posts.map(post => (
         <Post
+        key={post.text}
         displayName= {post.displayName}
         username= {post.username}
         verified= {post.verified}

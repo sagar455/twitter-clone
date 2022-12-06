@@ -21,6 +21,8 @@ const {tweetMessage,setTweetMessage} = props
         image: tweetImage
       });
 
+   
+
       setTweetMessage("");
       setTweetImage("");
     }
