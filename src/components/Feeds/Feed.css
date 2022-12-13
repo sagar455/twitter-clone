@@ -5,8 +5,8 @@
 .feed{
     flex: 0.4;
     border-right: 1px solid var(--twitter-background);
-    min-height: fit-content;
-    overflow-y: scroll;
+    min-height: 100vh;
+   overflow-y: scroll;
 }
 
 .feed_header{

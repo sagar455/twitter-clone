@@ -1,5 +1,10 @@
+.widgets::-webkit-scrollbar{
+    display: none;
+}
+
 .widgets{
     flex: 0.3;
+    overflow-y:auto;
 }
 
 .widgets_input{
