@@ -1,5 +1,5 @@
 import React from 'react'
-import { TwitterTimelineEmbed, TwitterShareButton, TwitterTweetEmbed} from 'react-twitter-embed';
+import { TwitterTimelineEmbed, TwitterTweetEmbed} from 'react-twitter-embed';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Widgets.css"
 
@@ -21,11 +21,6 @@ function Widgets() {
           <TwitterTweetEmbed
             tweetId={'1600093982931009536'}
           />
-            <TwitterShareButton
-    url={'https://www.youtube.com/watch?v=Ke90Tje7VS0'}
-    options={{ text: '#reactjs is awesome', via: 'SagarKumar305' }}
-  />
-
       </div>
 
 
